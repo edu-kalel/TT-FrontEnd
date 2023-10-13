@@ -11,11 +11,11 @@ export class UserServiceService {
   constructor(private http: HttpClient, private cookie: CookieService) { }
 
   saveClient(cliente: registrarCliente){
-    return this.http.post(url + 'registerClient', cliente);
+    return this.http.post(url + 'register', cliente);
   } 
 
   login(cliente: loginCliente){
-    return this.http.post(url + 'login', cliente);
+    return this.http.post(url + 'authenticate', cliente);
   }
 
   setToken(token: string) {

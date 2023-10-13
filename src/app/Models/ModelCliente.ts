@@ -1,8 +1,7 @@
 export interface registrarCliente{
-    name:           string,
-    firstSurname:   string,
-    secondSurname:  string,
-    telephone:      string,
+    firstname:   string,
+    lastname:  string,
+    tel:      string,
     email:          string,
     password:       string
 }

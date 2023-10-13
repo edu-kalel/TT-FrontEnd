@@ -26,12 +26,7 @@
                         <div class="card-body">
                             <form (ngSubmit)="saveClient()" [formGroup]="formRegistro">
                                 <div class="wave-group mb-4">
-                                    <input 
-                                        required="required" 
-                                        type="text" 
-                                        class="input"
-                                        formControlName="name"
-                                    >
+                                    
                                     <span class="bar"></span>
                                     <label class="label">
                                       <span class="label-char" style="--index: 0">N</span>
@@ -53,7 +48,7 @@
                                                 required="required" 
                                                 type="text" 
                                                 class="input"
-                                                formControlName="firstSurname"
+                                                formControlName="firstname"
                                             >
                                             <span class="bar"></span>
                                             <label class="label">
@@ -84,7 +79,7 @@
                                                 required="required" 
                                                 type="text" 
                                                 class="input"
-                                                formControlName="secondSurname"
+                                                formControlName="lastname"
                                             >
                                             <span class="bar"></span>
                                             <label class="label">
@@ -118,7 +113,7 @@
                                                 required="required" 
                                                 type="text" 
                                                 class="input"
-                                                formControlName="telephone"
+                                                formControlName="tel"
                                             >
                                             <span class="bar"></span>
                                             <label class="label">

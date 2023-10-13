@@ -3,6 +3,7 @@ import { UserServiceService } from 'src/app/Services/User/user-service.service';
 import { loginCliente } from 'src/app/Models';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent {
   constructor(
       private form: FormBuilder,
       private user_service: UserServiceService,
+      private router: Router
   ){
     this.formLogin = this.form.group({
       email: ['', [Validators.required, Validators.email]],
@@ -30,8 +32,8 @@ export class LoginComponent {
 
       this.user_service.login(cliente).subscribe(
         (data: any) => {
-          this.showMessageSucces("Ieeessss");
           this.user_service.setToken(data.token);
+          this.router.navigate(["/register"]);
         },
         (error) => {
           this.showErrorMessage();

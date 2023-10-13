@@ -20,10 +20,10 @@ export class RegisterComponent {
       private router: Router
   ){
     this.formRegistro = this.form.group({
-      name: ['', [Validators.required]],
-      firstSurname: ['', [Validators.required]],
-      secondSurname: ['', [Validators.required]],
-      telephone: ['', [Validators.required, this.validarNumeroTelefono]],
+
+      firstname: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
+      tel: ['', [Validators.required, this.validarNumeroTelefono]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       conf_pass: ['', [Validators.required]]
